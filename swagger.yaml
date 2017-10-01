@@ -37,7 +37,7 @@ paths:
               - questions_url
           examples:
             application/json:
-                durl: /
+                url: /
                 questions_url: /questions
   /questions/{question_id}:
     x-summary: Question
