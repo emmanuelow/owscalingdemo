@@ -28,10 +28,17 @@ paths:
           schema:
             type: object
             properties:
+              url:
+                type: string
               questions_url:
                 type: string
             required:
+              - url
               - questions_url
+          examples:
+            application/json:
+                durl: /
+                questions_url: /questions
   /questions/{question_id}:
     x-summary: Question
     x-description: >-
