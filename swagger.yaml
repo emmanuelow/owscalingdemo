@@ -57,6 +57,7 @@ paths:
         description: ID of the Question in form of an integer
         enum:
           - 1
+        x-example: 1
     get:
       tags:
         - Question
@@ -64,7 +65,7 @@ paths:
       summary: View a question detail
       responses:
         200:
-          description: ""
+          description: "Succesful single Question response"
           schema:
             $ref: '#/definitions/Question'
           examples:
@@ -92,6 +93,7 @@ paths:
         description: ID of the Question in form of an integer
         enum:
           - 1
+        x-example: 1
       - name: choice_id
         in: path
         required: true
@@ -100,6 +102,7 @@ paths:
         description: ID of the Choice in form of an integer
         enum:
           - 1
+        x-example: 1
     post:
       tags:
         - Question
