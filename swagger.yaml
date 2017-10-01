@@ -60,13 +60,26 @@ paths:
     get:
       tags:
         - Question
-      description: ""
+      description: "Retrieve a single Question"
       summary: View a question detail
       responses:
         200:
           description: ""
           schema:
             $ref: '#/definitions/Question'
+          examples:
+            application/json:
+              - question: "Favourite programming language?"
+                published_at: "2015-08-05T08:40:51.620Z"
+                choices:
+                  - choice: "Swift"
+                    votes: 2048
+                  - choice: "Python"
+                    votes: 1024
+                  - choice: "Objective-C"
+                    votes: 512
+                  - choice: "Ruby"
+                    votes: 256            
   /questions/{question_id}/choices/{choice_id}:
     x-summary: Choice
     parameters:
@@ -120,7 +133,8 @@ paths:
               $ref: '#/definitions/Question'
           examples:
             application/json:
-              - question: "Favourite programming language?"
+              - url: "/questions"
+                question: "Favourite programming language?"
                 published_at: "2015-08-05T08:40:51.620Z"
                 choices:
                   - choice: "Swift"
