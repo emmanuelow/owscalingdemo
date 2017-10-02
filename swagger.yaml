@@ -224,10 +224,3 @@ definitions:
     required:
       - question
       - choices
-    example:
-      question: "Favourite programming language?"
-      choices:
-        - "Swift"
-        - "Python"
-        - "Objective-C"
-        - "Ruby"
