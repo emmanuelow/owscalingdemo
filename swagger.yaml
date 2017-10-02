@@ -70,7 +70,7 @@ paths:
             $ref: '#/definitions/Question'
           examples:
             application/json:
-              - url: "/questions/1"
+                url: "/questions/1"
                 question: "Favourite programming language?"
                 published_at: "2015-08-05T08:40:51.620Z"
                 choices:
@@ -115,7 +115,7 @@ paths:
             $ref: '#/definitions/Choice'
   /questions:
     x-summary: Questions collection
-    x-description: Again, instead of constructing the URLs for the next page. It is **highly** recommended that you follow the `next` link header in the response.
+    x-description: Response contains paging headers
     parameters:
       - name: page
         in: query
