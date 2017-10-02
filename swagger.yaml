@@ -181,13 +181,13 @@ paths:
                 published_at: "2015-08-05T08:40:51.620Z"
                 choices:
                   - choice: "Swift"
-                    votes: 2048
+                    votes: 0
                   - choice: "Python"
-                    votes: 1024
+                    votes: 0
                   - choice: "Objective-C"
-                    votes: 512
+                    votes: 0
                   - choice: "Ruby"
-                    votes: 256
+                    votes: 0
 definitions:
   Question:
     title: Question
@@ -236,3 +236,10 @@ definitions:
     required:
       - question
       - choices
+    example:
+      question: "Favourite programming language?"
+      choices:
+        - "Swift"
+        - "Python"
+        - "Objective-C"
+        - "Ruby"
