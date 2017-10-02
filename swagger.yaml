@@ -84,8 +84,6 @@ paths:
         type: number
         format: int32
         description: ID of the Question in form of an integer
-        enum:
-          - 1
         x-example: 1
       - name: choice_id
         in: path
@@ -93,8 +91,6 @@ paths:
         type: number
         format: int32
         description: ID of the Choice in form of an integer
-        enum:
-          - 1
         x-example: 1
     post:
       tags:
