@@ -17,14 +17,14 @@ produces:
 paths:
   /:
     x-summary: Polls API Root
-    x-description: This resource does not have any attributes. Instead it offers the initial API affordances in the form of the links in the JSON body.\nIt is recommend to follow the “url” link values or Link headers to get to resources instead of constructing your own URLs to keep your client decoupled from implementation details.
+    x-description: This resource does not have any attributes. Instead it offers the initial API affordances in the form of the links in the JSON body.
     get:
       description: ""
       summary: Retrieve the Entry Point
       parameters: []
       responses:
         200:
-          description: ""
+          description: "Succesful entry point response"
           schema:
             type: object
             properties:
@@ -40,14 +40,9 @@ paths:
                 url: /
                 questions_url: /questions
   /questions/{question_id}:
-    x-summary: Question
+    x-summary: Question Detail
     x-description: >-
-      A Question object has the following attributes.
-
-      - question
-      - published_at
-      - url
-      - choices (an array of Choice objects).
+      A single Question object can be retrieved by its unique ID
     parameters:
       - name: question_id
         in: path
@@ -83,7 +78,7 @@ paths:
                   - choice: "Ruby"
                     votes: 256            
   /questions/{question_id}/choices/{choice_id}:
-    x-summary: Choice
+    x-summary: Choice Detail
     parameters:
       - name: question_id
         in: path
@@ -106,7 +101,7 @@ paths:
     post:
       tags:
         - Question
-      description: This action allows you to vote on a question's choice.
+      description: Cast your vote on a question's choice.
       summary: Vote on a Choice
       responses:
         201:
@@ -119,8 +114,8 @@ paths:
                 choice: "Swift"
                 votes: 2048
   /questions:
-    x-summary: Questions collection
-    x-description: Response contains paging headers
+    x-summary: Questions Collection
+    x-description: Actions on the Questions Collection
     parameters:
       - name: page
         in: query
@@ -131,11 +126,11 @@ paths:
     get:
       tags:
         - Question
-      description: ""
+      description: "Response contains paging headers"
       summary: List all questions
       responses:
         200:
-          description: ""
+          description: "Succesful Response contains paging headers"
           schema:
             type: array
             items:
@@ -158,10 +153,9 @@ paths:
       tags:
         - Question
       description: >-
-        You can create your own question using this action. It takes a JSON dictionary containing a question and a collection of answers in the form of choices.
-
-        - question (string) - The question
-        - choices (array[string]) - A collection of choices.
+        You can create your own question using this action.
+        
+        It takes a JSON dictionary containing a question and a collection of answers in the form of choices.
       summary: Create a new question
       parameters:
         - name: body
