@@ -113,6 +113,11 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/Choice'
+          examples:
+            application/json:
+                url: "/questions/1/choices/1"
+                choice: "Swift"
+                votes: 2048
   /questions:
     x-summary: Questions collection
     x-description: Response contains paging headers
