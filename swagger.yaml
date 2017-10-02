@@ -50,8 +50,6 @@ paths:
         type: number
         format: int32
         description: ID of the Question in form of an integer
-        enum:
-          - 1
         x-example: 1
     get:
       tags:
