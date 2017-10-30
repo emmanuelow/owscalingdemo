@@ -1,13 +1,13 @@
 swagger: '2.0'
 info:
   version: '1.0'
-  title: Oracle Rocks
+  title: Scaling your API demo
   description: Polls is a simple web service that allows consumers to view polls and vote in them.
   license:
     name: MIT
     url: http://github.com/apiaryio/polls-api/blob/master/LICENSE
 host: polls.apiblueprint.org
-basePath: /
+basePath: /v2/
 schemes:
 - https
 consumes:
