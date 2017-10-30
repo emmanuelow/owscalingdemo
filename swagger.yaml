@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   version: '1.0'
-  title: Scaling Demo Polls
+  title: Scaling API
   description: Polls is a simple web service that allows consumers to view polls and vote in them.
   license:
     name: MIT
@@ -19,7 +19,7 @@ paths:
     x-summary: Polls API Root
     x-description: This resource does not have any attributes. Instead it offers the initial API affordances in the form of the links in the JSON body.
     get:
-      description: ""
+      description: "Retrieves the base URL "
       summary: Retrieve the Entry Point
       parameters: []
       responses:
@@ -107,7 +107,7 @@ paths:
                 url: "/questions/1/choices/1"
                 choice: "Swift"
                 votes: 2048
-  /questions:
+  /question:
     x-summary: Questions Collection
     x-description: Actions on the Questions Collection
     parameters:
@@ -224,3 +224,10 @@ definitions:
     required:
       - question
       - choices
+    example:
+      question: "Favourite programming language?"
+      choices:
+        - "Swift"
+        - "Python"
+        - "Objective-C"
+        - "Ruby"
