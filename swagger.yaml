@@ -107,7 +107,7 @@ paths:
                 url: "/questions/1/choices/1"
                 choice: "Swift"
                 votes: 2048
-  /questions:
+  /question:
     x-summary: Questions Collection
     x-description: Actions on the Questions Collection
     parameters:
