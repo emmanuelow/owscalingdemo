@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   version: '1.0'
-  title: Scaling API
+  title: Polls API
   description: Polls is a simple web service that allows consumers to view polls and vote in them.
   license:
     name: MIT
@@ -39,7 +39,7 @@ paths:
             application/json:
                 url: /
                 questions_url: /questions
-  /questions/{question_id}:
+  /question/{question_id}:
     x-summary: Question Detail
     x-description: >-
       A single Question object can be retrieved by its unique ID
@@ -67,8 +67,8 @@ paths:
                 question: "Favourite programming language?"
                 published_at: "2015-08-05T08:40:51.620Z"
                 choices:
-                  - choice: "Swift"
-                    votes: 2048
+                  - choice: "Go"
+                    votes: 4096
                   - choice: "Python"
                     votes: 1024
                   - choice: "Objective-C"
